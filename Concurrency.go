@@ -11,6 +11,17 @@ func main() {
 	for msg := range c { // blocking call
 		fmt.Println(msg)
 	}
+
+	d := make(chan string, 2) // buffer allows us to store hello and world
+	d <- "hello"
+	d <- "world"
+
+	msg2 := <-d
+	fmt.Println(msg2)
+
+	msg2 = <-d
+	fmt.Println(msg2)
+
 }
 
 func count(thing string, c chan string) {
