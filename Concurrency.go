@@ -1,11 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-func main() {
+/* func main() {
 	c := make(chan string) // Channel
 	go count("sheep", c)
 	for msg := range c { // blocking call
@@ -32,3 +27,4 @@ func count(thing string, c chan string) {
 
 	close(c) // close channel when finished sending
 }
+*/
